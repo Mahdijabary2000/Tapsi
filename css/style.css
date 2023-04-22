@@ -56,7 +56,16 @@ h2{
     
     } 
 }
-
+body::-webkit-scrollbar {
+  width: 13px;
+}
+body::-webkit-scrollbar-track {
+  background: #737373;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #FF5722;
+  border-radius: 6px;
+}
 /* button */
 .btn{
     font-size: 1.4rem;
@@ -74,10 +83,12 @@ h2{
 .btn-primary{
     color: var(--color-white);
     background-color: var(--colol-primary);
+    transition: all 0.2s;
 }
 .btn-secondary{
     color: var(--color-white);
     background-color: var(--color-secondary-dark);
+
 
 }
 .btn-block{
@@ -241,6 +252,10 @@ h2{
     padding: 1.2rem 3rem;
     
 }
+.feature .btn:hover{
+    background-color: #FFA589;
+    
+}
 .feature__imag > img{
     width: 100%;
     height:auto ;
@@ -257,19 +272,72 @@ h2{
     .feature{
         grid-template-columns: repeat(2,1fr);
     } 
+    .feature__text{
+      font-size: 15px;
+    }
     .feature__imag{
       width: 100%;
-        order: 2;
+        order: 1;
         margin-bottom: 0;
 
     }
     .feature__dtail{
-        order: 1;
+        order: 2;
 
     }
     .feature__imag > img{
         width: 100%;
     }
+} 
+
+
+.feature{
+  display:grid;
+  justify-content: center;
+padding: 2rem;
+gap: 0rem 10rem;
+      
+}
+.feature__text{
+  margin-bottom:2rem ;
+  text-align: justify;
+}
+.feature .btn{
+  padding: 1.2rem 3rem;
+  
+}
+.feature .btn:hover{
+  background-color: #FFA589;
+  
+}
+.feature__imag2 > img{
+  width: 100%;
+  height:auto ;
+}
+.feature__imag2{
+width: 90%;
+justify-self: flex-end;
+margin-bottom: 2rem;
+
+}
+
+@media screen and (min-width:1024px) {
+  .feature{
+      grid-template-columns: repeat(2,1fr);
+  } 
+  .feature__imag2{
+    width: 100%;
+      order: 2;
+      margin-bottom: 0;
+
+  }
+  .feature__dtail2{
+      order: 1;
+
+  }
+  .feature__imag2 > img{
+      width: 100%;
+  }
 } 
 
 /* contact-us */
@@ -478,7 +546,7 @@ textarea{
     transition: all 0.3s ease-out;
 }
 .footer__item a:hover {
-  color: var(--color-primary);
+  color:#FF5722
 }
 .footer__item h6{
     font-size: 1.8rem;
@@ -511,117 +579,15 @@ textarea{
         margin-left: 2rem;
     }
 }
-
-/* navbar
-.main-header{
-    background-color: var(--color-navbar);
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 2rem;
-}
-.nav__list{
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    font-size: 1.4rem;
-    max-height: 0;
-   overflow: hidden;
-   opacity: 0;
-   transition: all 0.4s ease-out;
-}
-.nav.nav__expanded .nav__list {
-    max-height: 100vh;
-    opacity: 1;
-  }
-.nav__item{
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-    
-}
-.nav__item > a {
-    display: block;
-    color: #444;
-    text-decoration: none;
-    padding: 0.5rem 0;
-    transition: all 0.4s ease-out;
-}
-.nav__item > a:hover {
-    color: var(--colol-primary);
-    
-}
-
-.nav__item.cta {
-    font-size: 1.4rem;
-    border: 0;
-}
-.nav__item.cta > a{
-    color: #fff;
-    font-size: 1.4rem;
-}
-.nav__item .btn{
-    padding:1rem 1rem ;
-}
-@media screen and (min-width:768px) {
-    .nav{
-        padding: 0 2rem;
-    }
-    .nav__toggler{
-        display: none;
-    }
-    .nav__list{
-        flex-direction: row;
-        align-items:center ;
-        width: auto;
-        opacity: 1;
-        max-height: 100%;
-    }
-    .nav__item{
-        margin-right: 2rem;
-        margin-bottom: 0;
-        font-size: 1.5rem;
-        border: 0;
-
-    }
-    
-}
-/*
-
-.nav__toggler {
-    cursor: pointer;
-  }
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    margin: 5px 0;
-    border-radius: 5px;
-    transition: all 0.4s ease-out;
-  }
-  
-  .nav.nav__expanded .bar-one {
-    transform: rotate(-45deg) translate(-9px, 6px);
-    margin: 8px 0;
-  }
-  
-  .nav.nav__expanded .bar-two {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  
-  .nav.nav__expanded .bar-three {
-    transform: rotate(45deg) translate(-8px, -8px);
-    margin: 8px 0;
-  } */
-
-  
   /* NAVBAR */
 
 .main-header {
-    background-color: var(--color-navbar);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+    z-index: 1000;
+    position: sticky;
+    top: 0px;
+    height: 50px;
   }
   .nav {
     display: flex;
@@ -661,8 +627,9 @@ textarea{
     transition: all 0.4s ease-out;
   }
   
-  .nav__item > a :hover {
-    color: var(--color-primary);
+  .nav__item > a:hover {
+    color: #FF5722;
+ 
   }
   
   .nav__item.cta {
@@ -680,6 +647,14 @@ textarea{
   
   
   @media screen and (min-width:768px) {
+    .main-header {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      position: sticky;
+      top: 0px;
+      height: 80px;
+    }
     .nav {
       padding: 0 2rem;
     }
