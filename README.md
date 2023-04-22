@@ -1,6 +1,2 @@
 # Tapsi-Demo!
-<img
-  src="/path/to/img.jpg"
-  alt="Alt text"
-  title="Optional title"
-  style="display: inline-block; margin: 0 auto; max-width: 300px">
+![tapsi demo - Google Chrome 4_22_2023 1_59_07 PM](https://user-images.githubusercontent.com/125316110/233776157-6c63b11f-8cc6-415d-b616-cc6a0cb02408.png)
