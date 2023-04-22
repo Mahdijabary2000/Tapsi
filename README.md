@@ -1,2 +1,6 @@
 # Tapsi-Demo!
-[Uploading tapsi demo - Google Chrome 4_22_2023 1_59_07 PM.png…]()
+<img
+  src="/path/to/img.jpg"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
